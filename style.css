@@ -19,3 +19,10 @@ body{
     width: 100%;
     padding-block: 8px;
 }
+
+.galeria p{
+    background-color: rgb(78, 0, 180);
+    font-size: 20px;
+}
+
+

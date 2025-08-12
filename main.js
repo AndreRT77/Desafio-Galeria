@@ -2,88 +2,88 @@
 
 const imagens = [
 {
-    nome: 'The Mantle',
+    nome: 'The Mantle - Agalloch',
     url: './img/Agalloch.webp'
 },
 {
-    nome: 'Hallatar',
+    nome: 'No Stars Upon the Bridge - Hallatar',
     url: './img/Hallatar.webp'
 },
 {
-    nome: 'Katatonia',
+    nome: "Tonight's Decision - Katatonia",
     url: './img/Katatonia.webp'
 },
 {
-    nome: 'New Moon',
+    nome: 'New Moon - Swallow The Sun',
     url: './img/New Moon.webp'
 },
 {
-    nome: 'Ghost Reveries Opeth',
+    nome: 'Ghost Reveries - Opeth',
     url: './img/Opeth.webp'
 },
 {
-    nome: 'Sovran Draconian',
+    nome: 'Sovran - Draconian',
     url: './img/Sovran.webp'
 },
 {
-    nome: 'Trees of Eternity',
+    nome: 'Hour of Nightgale - Trees of Eternity',
     url: './img/TOE.webp'
 },
 {
-    nome: 'Porcupine Tree',
+    nome: 'Fear of Blank Planet - Porcupine Tree',
     url: './img/Porcupine.webp'
 },
 
 {
-    nome: 'Edge of Sanity',
+    nome: 'Purgatory Afterglow - Edge of Sanity',
     url: './img/Edge of Sanity.webp'
 },
 {
-    nome: 'Tool',
+    nome: 'Lateratus - Tool',
     url: './img/Lateratus.webp'
 },
 {
-    nome: 'Anathema',
+    nome: 'Eternity - Anathema ',
     url: './img/Anathema.webp'
 },
 {
-    nome: 'Gojira',
+    nome: " L'efant Sauvage - Gojira",
     url: './img/Gojira.webp'
 },
 {
-    nome: 'Soen',
+    nome: 'Memorial - Soen',
     url: './img/Soen.webp'
 },
 {
-    nome: 'DVNE',
+    nome: 'Etemen Aenka - DVNE',
     url: './img/DVNE.webp'
 },
 {
-    nome: 'The Ocean',
+    nome: ' Pelagial - The Ocean',
     url: './img/Ocean.webp'
 },
 {
-    nome: 'Leprous',
+    nome: 'Malina - Leprous',
     url: './img/Leprous.webp'
 },
 {
-    nome: 'In Mourning',
+    nome: 'Song of the Cranes - In Mourning',
     url: './img/Mourning.webp'
 },
 {
-    nome: 'The fox and the bird',
+    nome: 'The Fox and the Bird - Ok, Goodnight',
     url: './img/Ok.webp'
 },
 {
-    nome: 'Caligula Horse',
+    nome: "In Contact - Caligula's Horse",
     url: './img/Caligula.webp'
 },
 {
-    nome: 'Bauhaus',
+    nome: "The Sky's Gone Out  - Bauhaus",
     url: './img/Bauhaus.webp'
 },
 {
-    nome: 'A Forest of Stars',
+    nome: 'Beware The Sword You Cannot See - A Forest of Stars',
     url: './img/Forest of Stars.webp'
 },
 
@@ -112,11 +112,19 @@ const imagens = [
 ]
 
 function criarImagem(srcImagem) {
-    const galeria = document.getElementById ('galeria')
+    
+    const galeria = document.getElementById('galeria')
+    const container = document.createElement('div')
     const imagem = document.createElement('img')
     imagem.src = srcImagem.url
-    galeria.appendChild(imagem)
+    container.appendChild(imagem)
+    const legenda = document.createElement('p')
+    legenda.textContent = srcImagem.nome
+    container.appendChild(legenda)
+    galeria.appendChild(container)
 }
+
+
 function carregarImagens(){
     imagens.forEach (criarImagem)
     }
